@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four js</title>
+</head>
+
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language" id="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // const newl = document.createElement('li')
+    // console.log(newl)
+    // newl.innerText = "Python"
+    // document.getElementById("language").appendChild(newl)
+
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerText = `${langName}`
+        document.getElementById("language").appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+    function addoptilanguage(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    }
+    addLanguage("golang")
+
+    // Edit
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Mojo"
+    const newli = document.createElement("li")
+    newli.textContent = "Mojo"
+    secondLang.replaceWith(newli)
+
+    // edit 
+    const firstLang = document.querySelector("li:first-child")
+    // firstLang.outerHTML = "<li>TypeScript</li>"
+    const newFirst = document.createElement("li")
+    newFirst.innerHTML = "TypeScript"
+    firstLang.replaceWith(newFirst)
+
+    // remove 
+    const lastLang = document.querySelector("li:last-child")
+    // console.log(lastLang)
+    lastLang.remove()
+</script>
+
+</html>
