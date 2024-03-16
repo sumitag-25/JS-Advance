@@ -110,13 +110,39 @@ consumePromiseFive()
 
 
 
-fetch('https://api.github.com/users/hiteshchoudhary')
-.then(function(response){
-    return response.json()
-})
-.then(function(data){
-    console.log(data);
-})
-.catch(function (error) {
-    console.log(error);
-})
+// fetch('https://api.github.com/users/hiteshchoudhary')
+// .then(function(response){
+//     return response.json()
+// })
+// .then(function(data){
+//     console.log(data);
+// })
+// .catch(function (error) {
+//     console.log(error);
+// })
+
+
+
+// fetch('https://api.thecatapi.com/v1/images/0XYvRd7oD')
+// .then(function(response){
+//     return response.json()
+// })
+// .then(function(data){
+//     console.log(data);
+// })
+// .catch(function(error){
+//     console.log(error);
+// })
+
+
+async function requestCatApi() {
+    try {
+        const requestData = await fetch('https://api.thecatapi.com/v1/images/0XYvRd7oD')
+        const data = await requestData.json();
+        console.log(data);
+    } catch (error) {
+        console.log("Error Appeared");
+    }
+}
+
+requestCatApi();
