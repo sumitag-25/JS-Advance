@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Javascript</title>
+</head>
+<body>
+    <h2>Chai Aur Code</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+    <script>
+        let intervalID;
+        
+        const start = document.querySelector("#start")
+
+        start.addEventListener("click", function(){
+            const fun = function (setTime) {
+            console.log(setTime, Date.now())
+        }
+        intervalId = setInterval(fun,1000, "hi")
+        })
+        
+        const stop = document.querySelector("#stop")
+
+        stop.addEventListener("click", function(){
+            clearInterval(intervalId)
+            console.log("STOPPED")
+        })
+
+    </script>
+</html>
