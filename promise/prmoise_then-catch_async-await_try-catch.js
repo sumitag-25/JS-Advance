@@ -135,14 +135,41 @@ consumePromiseFive()
 // })
 
 
-async function requestCatApi() {
+// async function requestCatApi() {
+//     try {
+//         const requestData = await fetch('https://api.thecatapi.com/v1/images/0XYvRd7oD')
+//         const data = await requestData.json();
+//         console.log(data);
+//     } catch (error) {
+//         console.log("Error Appeared");
+//     }
+// }
+
+// requestCatApi();
+
+// const requestData = fetch("https://randomuser.me/api/")
+
+// requestData.then(function (response) {
+//     return response.json()
+// })
+//     .then(function (data) {
+//         const user = data.results[0];
+//         const firstName = user.name.first;
+//         const lastName = user.name.last;
+//         console.log(firstName);
+//     })
+//     .catch(function (error) {
+//         console.log(error);
+//     })
+
+async function fetchdata() {
     try {
-        const requestData = await fetch('https://api.thecatapi.com/v1/images/0XYvRd7oD')
-        const data = await requestData.json();
-        console.log(data);
+    const response = await fetch('https://randomuser.me/api/')
+    const data = await response.json()
+    console.log(data);
     } catch (error) {
-        console.log("Error Appeared");
+        console.log("ERROR");
     }
 }
 
-requestCatApi();
+fetchdata();
