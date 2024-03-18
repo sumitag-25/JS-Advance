@@ -9,7 +9,6 @@ promiseOne.then(function () {
     console.log("promise is completed")
 })
 
-
 new Promise(function (resolve, reject) {
     setTimeout(() => {
         console.log("Async Task Two")
@@ -57,7 +56,6 @@ const username = promiseFour
     .finally(() => {
         console.log("The Promise is either resolved or rejected");
     })
-
 
 const promiseFive = new Promise(function (resolve, reject) {
     setTimeout(function () {
