@@ -26,6 +26,6 @@ function Person(name, age) {
 let person1 = new Person("Alice", 30);
 let person2 = new Person("Bob", 25);
 
-// Calling the method defined in the constructor function
+// Calling the method defined in the constructor function.
 person1.sayHello(); // Output: Hello, my name is Alice and I am 30 years old.
 person2.sayHello(); // Output: Hello, my name is Bob and I am 25 years old.
